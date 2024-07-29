@@ -30,7 +30,7 @@ jobs:
     - run: |
         npm install
         npm run build --if-present
-
+        sudo mkdir -p /var/www/html
         sudo cp -r ./dist/* /var/www/html
         
     - run: sudo systemctl restart nginx
